@@ -1,31 +1,74 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>IM DISCO</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
-  </head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HELLO!!</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" href="2.png" type="image/gif" sizes="16x16">
 
-  <body>    
-    
-    <div class="c">
-      
-      <h1>I AM DISCO</h1>
-      
-      <img src="https://thumbor.forbes.com/thumbor/fit-in/416x416/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5f47d4de7637290765bce495%2F0x0.jpg%3Fbackground%3D000000%26cropX1%3D1398%26cropX2%3D3908%26cropY1%3D594%26cropY2%3D3102" width="250px" height="250px">
-      
-      <audio src="LOFI.wav" autoplay loop></audio>
+</head>
 
-    </div>
-    
-    <div class="center">
-      <button type="button" ><a href="about.html"> ABOUT</a></button>
-      <button type="button" ><a href="projects.html"> PROJECTS</a></button>
-      <button type="button" ><a href="me.html"> ME</a></button>
-    </div>
+<body>
 
-  </body>
+  <div class='console-container'><span id='text'></span><div class='console-underscore' id='console'>&#95;</div></div>
+
+  
+  
+</body>
+
+<script>
+// function([string1, string2],target id,[color1,color2])    
+consoleText(['Hello i am Disco.', 'This is my portfolio', 'Take a look'], 'text',['tomato','rebeccapurple','aliceblue']);
+
+function consoleText(words, id, colors) {
+  if (colors === undefined) colors = ['#fff'];
+  var visible = true;
+  var con = document.getElementById('console');
+  var letterCount = 1;
+  var x = 1;
+  var waiting = false;
+  var target = document.getElementById(id)
+  target.setAttribute('style', 'color:' + colors[0])
+  window.setInterval(function() {
+
+    if (letterCount === 0 && waiting === false) {
+      waiting = true;
+      target.innerHTML = words[0].substring(0, letterCount)
+      window.setTimeout(function() {
+        var usedColor = colors.shift();
+        colors.push(usedColor);
+        var usedWord = words.shift();
+        words.push(usedWord);
+        x = 1;
+        target.setAttribute('style', 'color:' + colors[0])
+        letterCount += x;
+        waiting = false;
+      }, 1000)
+    } else if (letterCount === words[0].length + 1 && waiting === false) {
+      waiting = true;
+      window.setTimeout(function() {
+        x = -1;
+        letterCount += x;
+        waiting = false;
+      }, 1000)
+    } else if (waiting === false) {
+      target.innerHTML = words[0].substring(0, letterCount)
+      letterCount += x;
+    }
+  }, 120)
+  window.setInterval(function() {
+    if (visible === true) {
+      con.className = 'console-underscore hidden'
+      visible = false;
+
+    } else {
+      con.className = 'console-underscore'
+
+      visible = true;
+    }
+  }, 400)
+}
+</script>
+
 </html>

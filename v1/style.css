@@ -1,0 +1,124 @@
+
+body {
+
+  background: rgb(131,58,180);
+  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+
+  font-family: 'Cabin', sans-serif;
+  place-content: center;
+
+}
+
+div {
+
+  margin-top: 20px;
+  position: relative;
+  background: white;
+  border-bottom: 50px ;
+  width: 50%;
+  text-align: center;
+  height: 80%;
+  top: 50%;
+  left: 25%;
+  padding: 20px;
+  border-radius: 100px;
+
+}
+
+img {
+  border-radius: 200px;
+}
+
+h1 {
+
+  background: #0EEDE6;
+  background: #FC6108;
+  background: -webkit-linear-gradient(to right, #FC6108 34%, #190E00 100%);
+  background: -moz-linear-gradient(to right, #FC6108 34%, #190E00 100%);
+  background: linear-gradient(to right, #FC6108 34%, #190E00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 60px;
+
+}
+
+button {
+  /* background: linear-gradient(to right, #373b44, #4286f4);  W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: 'Cabin', sans-serif;
+
+  border-radius: 10px;
+}
+
+.center {
+  
+}
+
+/* button {background-image: linear-gradient(to right, #314755 0%, #26a0da  51%, #314755  100%)}
+
+button {
+            
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;            
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+}
+
+button:hover {
+  background-position: right center; /* change the d  irection of the change here 
+  color: #fff;
+  text-decoration: none;
+}
+*/
+
+
+button {background-image: linear-gradient(to right, #FF512F 0%, #F09819  51%, #FF512F  100%)}
+
+button {
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;            
+  box-shadow: 0 0 20px rgb(255, 255, 255);
+  border-radius: 10px;
+}
+
+button:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+a:link {
+  color: white;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+a:active {
+  color: white;
+  text-decoration: none;
+} 
