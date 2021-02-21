@@ -27,3 +27,11 @@ body {
   top:-0.14em;
   left:10px;
 }
+
+.social-bar {
+  padding: 5px;
+  position: relative;
+  text-align: center;
+  letter-spacing: 10px;
+  margin-top: 500px;
+}
